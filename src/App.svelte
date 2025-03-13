@@ -75,5 +75,6 @@
   }
   input {
     color: #022672;
+    margin-bottom: 2rem;
   }
 </style>
