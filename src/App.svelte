@@ -18,16 +18,17 @@
     {#if guessed}
       <img
         src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExajNnY3dmZmVjd3dmZnJ4anFtZnljN205dTBxcGZlNW5pM2FvNGt0MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Yycc82XEuWDaLLi2GV/giphy.gif"
+        alt="Man from 'The Office' shaking his head"
       />
     {/if}
     <form on:submit|preventDefault={checkAnswer}>
-      <input type="text" bind:value={code} placeholder="one word">
+      <input type="text" bind:value={code} placeholder="one word" />
       <button type="submit">Guess</button>
     </form>
   {:else}
     <h1>
       Who brought Allison the idea to let the bases buy her a house with
-      DeKoor's money? 
+      DeKoor's money?
     </h1>
     <h1>(He is somewhere in this room...)</h1>
   {/if}
@@ -76,6 +77,7 @@
   }
   input {
     color: #022672;
+    max-width: 80vw;
     margin-bottom: 2rem;
   }
 </style>
