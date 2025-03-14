@@ -21,14 +21,15 @@
       />
     {/if}
     <form on:submit|preventDefault={checkAnswer}>
-      <input type="text" bind:value={code} />
+      <input type="text" bind:value={code} placeholder="one word">
       <button type="submit">Guess</button>
     </form>
   {:else}
     <h1>
       Who brought Allison the idea to let the bases buy her a house with
-      DeKoor's money?
+      DeKoor's money? 
     </h1>
+    <h1>(He is somewhere in this room...)</h1>
   {/if}
 </main>
 
@@ -39,7 +40,7 @@
   }
   h1 {
     font-size: 6rem;
-    padding: 0;
+    padding: 1rem;
     margin-top: 0;
     line-height: 1.1;
   }
