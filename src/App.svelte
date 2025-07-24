@@ -2,7 +2,7 @@
   let code = "";
   let correct = false;
   let guessed = false;
-  const answer = "house";
+  const answer = "parel";
   function checkAnswer() {
     if (code.toLowerCase() === answer) {
       correct = true;
@@ -16,19 +16,16 @@
 <main class={correct && "correct"}>
   {#if !correct}
     {#if guessed}
-      <img
-        src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExajNnY3dmZmVjd3dmZnJ4anFtZnljN205dTBxcGZlNW5pM2FvNGt0MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Yycc82XEuWDaLLi2GV/giphy.gif"
-      />
+      <video autoplay loop>
+        <source src="nyn.mp4" type="video/mp4" />
+      </video>
     {/if}
     <form on:submit|preventDefault={checkAnswer}>
-      <input type="text" bind:value={code} />
+      <input type="text" placeholder="wat is het woord?" bind:value={code} />
       <button type="submit">Guess</button>
     </form>
   {:else}
-    <h1>
-      Who brought Allison the idea to let the bases buy her a house with
-      DeKoor's money?
-    </h1>
+    <h1>Parels, dat zijn jullie stuk voor stuk!</h1>
   {/if}
 </main>
 
@@ -76,5 +73,8 @@
   input {
     color: #022672;
     margin-bottom: 2rem;
+  }
+  video {
+    width: 90%;
   }
 </style>
