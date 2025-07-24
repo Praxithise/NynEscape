@@ -16,6 +16,7 @@
 <main class={correct && "correct"}>
   {#if !correct}
     {#if guessed}
+      <h1>FOUT!</h1>
       <img
         src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2xxc3Mzd3RjNm5pMW91OWl0YWd0cjM5eHIybzhtbnRnbHJsMTByOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Pzd4dARLvaoDK/giphy.gif"
       />
@@ -26,7 +27,7 @@
     </form>
   {:else}
     <div>
-      <h1>Parels, dat zijn jullie stuk voor stuk!</h1>
+      <h1>Parels, dat vind ik jullie stuk voor stuk!</h1>
       <video autoplay loop preload="auto">
         <source src="nyn.mp4" type="video/mp4" />
       </video>
