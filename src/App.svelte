@@ -16,7 +16,7 @@
 <main class={correct && "correct"}>
   {#if !correct}
     {#if guessed}
-      <video autoplay loop>
+      <video autoplay loop preload="auto">
         <source src="nyn.mp4" type="video/mp4" />
       </video>
     {/if}
